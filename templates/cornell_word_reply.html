@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+    <p>Write your message:</p>
+    <form method=post>
+        <ul>
+            {% for line in conversations %}
+            <li>{{line}}</li>
+            {% endfor %}
+        </ul>
+      <p>Message: <input type=text name=sentence></p>
+         <input type="submit" name="SendName" value="Send">
+         <input type="submit" name="ResetName" value="Reset">
+    </form>
+{% endblock %}
